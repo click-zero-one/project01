@@ -1,0 +1,93 @@
+body {
+  background-color: aliceblue; }
+
+.containerMenu {
+  width: 100%;
+  display: flex;
+  position: relative; }
+
+.baseItem, .itemMenu, .itemSearch {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all .2s;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+
+.itemMenu {
+  background-color: black;
+  color: whitesmoke; }
+
+.itemMenu:hover {
+  width: 120px;
+  height: 60px;
+  border-radius: 30px; }
+
+.case01 {
+  position: relative;
+  right: 10px; }
+  
+.case02 {
+  position: relative;
+  right: 20px; }
+
+.case03 {
+  position: relative;
+  right: 30px; }
+
+.case04 {
+  position: relative;
+  right: 40px; }
+
+.itemSearch {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: 1px solid black; }
+
+.containerSearch {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.containerIconSearch {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px; }
+
+#search {
+  width: 0px;
+  height: 60px;
+  display: none;
+  border: none;
+  outline: 0;
+  font-size: 1.2rem;
+  text-indent: 7px;
+  background-color: rgba(0, 0, 0, 0); }
+
+.activeSearch {
+  animation: activeSearch .3s forwards; }
+
+@keyframes activeSearch {
+  0% {
+    width: 60px; }
+  100% {
+    width: 250px; } }
+.deActiveSearch {
+  animation: deActiveSearch .3s forwards; }
+
+@keyframes deActiveSearch {
+  0% {
+    width: 250px; }
+  100% {
+    width: 60px; } }
+@media (max-width: 780px) {
+  .container-item {
+    flex-direction: column; }
+
+  .case01, .case02, .case03, .case04 {
+    position: relative;
+    right: 0; } }
